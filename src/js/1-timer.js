@@ -50,7 +50,7 @@ startBtn.addEventListener('click', () => {
     const curetTime = new Date();
     const deltaTime = userSelectedDate - curetTime;
 
-    if (curetTime <= 0) {
+    if (deltaTime <= 0) {
       clearInterval(timerId);
       updateTimer({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       input.disabled = false;
